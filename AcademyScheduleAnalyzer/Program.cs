@@ -8,33 +8,74 @@ class Program
 {
     static void Main (string[] args)
     {
-// part 1
-        string[] sessionNames =
-        {
-            "C# Basics",
-            "Arrays",
-            "Functions",
-            "Date and Time",
-            "Exception Handling"
-        };
+// // part 1
+//         string[] sessionNames =
+//         {
+//             "C# Basics",
+//             "Arrays",
+//             "Functions",
+//             "Date and Time",
+//             "Exception Handling"
+//         };
 
-        DateTime[] sessionDates =
-        {
-            new DateTime(2026, 9, 10, 18, 0, 0),
-            new DateTime(2026, 9, 13, 18, 0, 0),
-            new DateTime(2026, 9, 17, 18, 0, 0),
-            new DateTime(2026, 9, 20, 18, 0, 0),
-            new DateTime(2026, 9, 24, 18, 0, 0)
-        };
+//         DateTime[] sessionDates =
+//         {
+//             new DateTime(2026, 9, 10, 18, 0, 0),
+//         };
 
-        int[] sessionDurations =
-        {
-            180,
-            240,
-            180,
-            240,
-            180
-        };
+//         int[] sessionDurations =
+//         {
+//             180,
+//             240,
+//             180,
+//             240,
+//             180
+//         };
+
+//         // part 5.1
+//         int total = GetTotalDuration(sessionDurations);
+//         double average = GetAverageDuration(sessionDurations);
+//         int shortest = GetShortestDuration(sessionDurations);
+//         int longest = GetLongestDuration(sessionDurations);
+
+//         Console.WriteLine($"Total Duration: {total} minutes");
+//         Console.WriteLine($"Average Duration: {average} minutes");
+//         Console.WriteLine($"Shortest Duration: {shortest} minutes");
+//         Console.WriteLine($"Longest Duration: {longest} minutes");
+
+//         // part 5.2
+//         DisplaySortedDurations(sessionDurations);
+
+//         // part 7.1
+//         int number = 50;
+
+//         Console.WriteLine($"Before: {number}");
+
+//         ChangeValue(ref number);
+
+//         Console.WriteLine($"After: {number}");
+//         // part 7.2
+//         Console.Write("Enter session: ");
+//         string sessionName = Console.ReadLine();
+
+//         if (GetSessionInfo(sessionName, sessionNames, sessionDurations, out int index, out int duration))
+//         {
+//             Console.WriteLine($"Index: {index}");
+//             Console.WriteLine($"Duration: {duration} minutes");
+//         }
+//         else
+//         {
+//             Console.WriteLine("Session not found.");
+//         }
+//         // part 7.3
+//         Console.WriteLine($"Before: {sessionDurations[0]}");
+
+//         ChangeArray(sessionDurations);
+
+//         Console.WriteLine($"After: {sessionDurations[0]}");
+
+//         // part 13
+//         DisplayDateFormats(sessionDates[0]);
 
         // while (true)
         // {
@@ -618,6 +659,17 @@ static string BuildReportUsingStringBuilder(string[] sessionNames, DateTime[] se
         Console.WriteLine($"Start Time: {nearestDate:hh:mm tt}");
         Console.WriteLine($"Remaining Days: {remainingTime.Days}");
         Console.WriteLine($"Remaining Hours: {remainingTime.Hours}");
+    }
+
+// part 13
+
+    static void DisplayDateFormats(DateTime date)
+    {
+        Console.WriteLine(date.ToString("yyyy-MM-dd"));
+        Console.WriteLine(date.ToString("dd/MM/yyyy"));
+        Console.WriteLine(date.ToString("dd MMMM yyyy"));
+        Console.WriteLine(date.ToString("dddd, dd MMMM yyyy"));
+        Console.WriteLine(date.ToString("hh:mm tt"));
     }
 
 // part 14
